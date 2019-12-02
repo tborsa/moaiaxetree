@@ -73,7 +73,7 @@ Built on top of the DOM Testing Library, the React one gives us more possibiliti
 
 One small thing about `getBy` and `queryBy` to be aware of is that `getBy` will throw an error if the element is not found. `queryBy` will return only null, so it's up to the context to guide you which you should use.
 
-Notes and example app based on [Francis' lecture](https://github.com/FrancisBourgouin/lhl-12-w8d1)
+### Notes and example app based on [Francis' lecture](https://github.com/FrancisBourgouin/lhl-12-w8d1)
 
 ### Useful Links
 * [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro)
