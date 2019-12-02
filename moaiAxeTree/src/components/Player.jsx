@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react';
-import { announceResult } from '../helpers/helpers';
+import { announceResult, chooseRobotItem } from '../helpers/helpers';
 
 export default function Player(props) {
-  const {playerSelection, compSelection} = props.state
+  const {playerSelection, compSelection, cheating} = props.state
   const {setState} = props
+
+  useEffect(() => {
+    if(playerSelection) {
+      const compSelection = chooseRobotItem(cheating, playerSelection);
+      setState(prevState => ({ ...prevState, compSelection}));
+    }
+  }, [playerSelection, setState, cheating]);
 
   useEffect(() => {
     if(playerSelection && compSelection){
