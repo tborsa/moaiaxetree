@@ -1,21 +1,13 @@
 import React from 'react';
 
 export default function Computer(props) {
-  const {state, setState} = props;
-  const handleClick = () => {
-    return setState(prevState => ({
-      ...prevState,
-      cheating: prevState.cheating ? false : true
-    }));
-  };
+  const {state} = props;
   return (
     <section className="computer">
       <span
         data-testid="robot-icon"
-        className={state.cheating ? 'cheating' : null}
         role="img"
         aria-label="robot"
-        onClick={handleClick}
       >
         🤖
       </span>

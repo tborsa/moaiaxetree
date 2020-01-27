@@ -15,25 +15,3 @@ export const announceResult = (playerSelection, compSelection) => {
   }
   return 'Tied';
 }
-
-export const genFeedbackMessage = (status) => {
-  const dict = {
-    'Won': 'Good job!',
-    'Lost': 'Loser!!',
-    'Tied': 'Half a loser.',
-  };
-  return dict[status] ? dict[status] : `Don't be shy! We're not mean at all!`;
-};
-
-export const chooseRobotItem = (cheating, playerSelection) => {
-  const lookup = {
-    Tree: 'Axe',
-    Moai: 'Tree',
-    Axe: 'Moai'
-  };
-  if (cheating) {
-    return lookup[playerSelection];
-  }
-  const validOptions = ["Moai", "Tree", "Axe"];
-  return validOptions[Math.floor(Math.random() * validOptions.length)];
-};

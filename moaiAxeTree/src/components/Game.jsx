@@ -5,10 +5,10 @@ import Result from './Result'
 
 export default function Game(props) {
   const [state, setState] = useState({
-    compSelection:null,
-    playerSelection:null,
-    status:'Waiting',
-    cheating:false
+    compSelection: null,
+    playerSelection: null,
+    status: 'Waiting',
+    cheating: true
   });
   
   return (
