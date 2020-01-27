@@ -1,10 +1,10 @@
 # W8D1 - Unit & Integration Testing
 
 ### To Do
-- [x] Review: Different types of testing
-- [x] Review: Test-Driven Development
-- [x] Considerations when writing tests
-- [x] Tools for testing React
+- [ ] Review: Different types of testing
+- [ ] Review: Test-Driven Development
+- [ ] Considerations when writing tests
+- [ ] Tools for testing React
 
 ### Types of Testing
 - **Static**
