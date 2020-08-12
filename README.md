@@ -1,10 +1,18 @@
 # W8D1 - Unit & Integration Testing
 
+
 ### To Do
-- [ ] Review: Different types of testing
-- [ ] Review: Test-Driven Development
-- [ ] Considerations when writing tests
-- [ ] Tools for testing React
+- [x] Review: Different types of testing
+- [x] Review: Test-Driven Development  
+- [x] Considerations when writing tests
+- [x] Tools for testing React
+
+### TASKS
+- [x] helper function that decides the robots throw
+- [x] helper function that displays the status to the user
+
+- [x] Toggle the robot so that it switches between a cheating and a fair mode 
+- [x] Show the correct display Message to the user 
 
 ### Types of Testing
 - **Static**

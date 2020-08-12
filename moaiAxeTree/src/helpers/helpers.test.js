@@ -1,4 +1,4 @@
-import { announceResult, chooseRobotItem } from './helpers';
+import { announceResult, roboThrow, displayStatus } from './helpers';
 
 describe('announceResult function', () => {  
   test('returns "Won" if player is "Axe" and comp is "Tree"', () => {
@@ -23,3 +23,48 @@ describe('announceResult function', () => {
     expect(announceResult()).toBe('Waiting');
   });
 });
+
+describe('roboThrow function', () => {
+  test('returns a valid throw if robot is not cheating', () => {
+    const cheating = false;
+    const playerThrow = 'Axe';
+    const result = roboThrow(cheating, playerThrow);
+    const throws = ['Moai', 'Axe', 'Tree'];
+    expect(throws.includes(result)).toBe(true);
+  })
+
+  test('returns a winning throw if robot is cheating', () => {
+
+    const cheating = true;
+    let playerThrow = 'Axe';
+    let result = roboThrow(cheating, playerThrow);
+    expect(result).toBe('Moai');
+
+    playerThrow = 'Tree';
+    result = roboThrow(cheating, playerThrow);
+    expect(result).toBe('Axe');
+
+    playerThrow = 'Moai';
+    result = roboThrow(cheating, playerThrow);
+    expect(result).toBe('Tree');
+
+  })
+})
+
+describe('displayStatus function', () => {
+  test('returns "...boooringg" when the result is "Tied"', () =>{
+    const status = "Tied"
+    const result = displayStatus(status);
+    expect(result).toBe('...boooringg');
+  })
+  test('returns "ahha looser, do it the same but, uh, better." when the result is "Lost"', () =>{
+    const status = "Lost"
+    const result = displayStatus(status);
+    expect(result).toBe('ahha looser, do it the same but, uh, better.');
+  })
+  test('returns "nice" when the result is "Won"', () =>{
+    const status = "Won"
+    const result = displayStatus(status);
+    expect(result).toBe('nice');
+  })
+})

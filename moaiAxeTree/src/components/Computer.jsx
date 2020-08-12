@@ -1,12 +1,16 @@
 import React from 'react';
 
 export default function Computer(props) {
-  const {state} = props;
+  const {state, setState} = props;
   return (
     <section className="computer">
       <span
-        data-testid="robot-icon"
+        onClick={() => setState((prev) => (
+          {...prev, cheating: !prev.cheating}
+        ))}
+        className={state.cheating? 'cheating' : ''}
         role="img"
+        data-testid="robo"
         aria-label="robot"
       >
         🤖
@@ -21,7 +25,7 @@ export default function Computer(props) {
           </button>
           <button>
             <span role="img" aria-label="axe">
-              {state.compSelection === "Axe" ? "🪓" : " ? "}
+              {state.compSelection === "Axe" ? "✂" : " ? "}
             </span>
           </button>
           <button>
