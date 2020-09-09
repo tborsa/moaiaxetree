@@ -7,7 +7,7 @@ export default function Header(props) {
       <h2>
         <span role="img" aria-label="moai statue">🗿</span>
         <span>-</span>
-        <span role="img" aria-label="axe">✂️</span>
+        <span role="img" aria-label="axe">🪓</span>
         <span>-</span>
         <span role="img" aria-label="tree">🌳</span>
       </h2>

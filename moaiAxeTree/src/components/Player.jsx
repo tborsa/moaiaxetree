@@ -35,7 +35,7 @@ export default function Player(props) {
             type="button"
             value="Axe"
           >
-            <span role="img" aria-label="axe">✂️</span>
+            <span role="img" aria-label="axe">🪓</span>
           </button>
 
           <button 

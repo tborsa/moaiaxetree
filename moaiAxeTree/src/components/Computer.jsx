@@ -25,7 +25,7 @@ export default function Computer(props) {
           </button>
           <button>
             <span role="img" aria-label="axe">
-              {state.compSelection === "Axe" ? "✂" : " ? "}
+              {state.compSelection === "Axe" ? "🪓" : " ? "}
             </span>
           </button>
           <button>
